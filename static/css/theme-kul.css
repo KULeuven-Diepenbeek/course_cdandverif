@@ -1,0 +1,383 @@
+
+/* ---------------- custom style below */
+
+ /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+} 
+
+
+span.update {
+    color: rgb(179, 0, 0);
+    background-color: rgba(255, 225, 56, 0.507);
+    width: 100%;
+}
+
+code {line-height: 1.2;}
+
+
+
+#uhlogo {
+    width: 165px;
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+    filter: invert(100%);    
+}
+
+#chapter p {
+    text-align: justify;
+}
+
+div.ex {
+    margin: 2rem 0;
+    position: relative;
+}
+
+div.ex p {
+    margin: 0;
+}
+
+div.ex .inner {
+    padding: 15px;
+    display: block;
+    font-size: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: #666;
+    border-top: 30px solid #F0B37E;
+    background: #FFF2DB;
+}
+
+div.ex .inner:first-child:before {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f085";
+    left: 10px;
+}
+
+div.ex .inner:first-child:after {
+    position: absolute;
+    top: 2px;
+    color: #fff;
+    left: 2rem;
+    content: 'Exercise !';
+}
+
+#sidebar #shortcuts h3 {
+    color: grey !important;
+}
+
+
+/* begin VlJo */
+div.todo {
+    background-color: red;
+    color: yellow;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.multicolumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+}
+
+div.multicolumn div.column{
+    width: 48%;
+    margin: 10px 10px;
+}
+
+div.multiHcolumn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.multiHcolumn div.column{
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 10px 10px;
+}
+
+div.column_highlight {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 10px 100px;
+    padding: 10px 0px;
+    background: var(--MAIN-SECTION-HIGHLIGHT-BG-color);
+    color: var(--MAIN-SECTION-HIGHLIGHT-color);
+    font-weight: bold;
+    font-size: 200%;
+}
+
+/* STUFF ADDED TO ENABLE EXERCISES */
+
+div.exercise {
+    padding: 5px 45px;
+    margin:  50px 20%;
+    background-color: lightgrey;
+}
+
+div.exercise div.hiddenSolution {
+  visibility: hidden;
+}
+
+div.exercise div.header {
+    font-size: 200%;
+    color: var(--MAIN-ANCHOR-color);
+    font-weight: 400;
+}
+
+div.exercise input {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px auto;
+}
+
+div.exercise div.question::before {
+  content: " Q: ";
+  margin-left:  -20px;
+  font-weight: bold;
+}
+div.exercise div.solution::before {
+  content: " A: ";
+  margin-left:  -20px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+div.solution b {
+    padding-left: 5%;
+}
+div.solution p {
+    padding-left: 10%;
+}
+
+div.multicolumn div.column .labquestion {
+    margin: 32px 0px;
+}
+
+div.centeredColumn {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.centeredColumn75 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* end VlJo */
+
+
+/* ---------------- custom style from theme below */
+ 
+:root{
+    
+    --MAIN-TEXT-color:#323232; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color:#1C90F3; /* Color of links */
+    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
+
+    --MENU-HEADER-BG-color:#01407A; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#54BCEB; /*Color of menu header border */ 
+
+    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
+
+    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
+
+    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
+    
+    --MAIN-SECTION-HIGHLIGHT-color: #ffffff;
+    --MAIN-SECTION-HIGHLIGHT-BG-color: #167ad0;
+
+}
+
+body {
+    color: var(--MAIN-TEXT-color) !important;
+}
+
+textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+h2, h3, h4, h5 {
+    color: var(--MAIN-TITLES-TEXT-color) !important;
+}
+
+a {
+    color: var(--MAIN-LINK-color);
+}
+
+.anchor {
+    color: var(--MAIN-ANCHOR-color);
+}
+
+a:hover {
+    color: var(--MAIN-LINK-HOVER-color);
+}
+
+#sidebar ul li.visited > a .read-icon {
+  color: var(--MENU-VISITED-color);
+}
+
+#body a.highlight:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    background-color: var(--MAIN-LINK-HOVER-color);
+}
+#sidebar {
+  background-color: var(--MENU-SECTIONS-BG-color);
+}
+#sidebar #header-wrapper {
+    background: var(--MENU-HEADER-BG-color);
+    color: var(--MENU-SEARCH-BOX-color);
+    border-color: var(--MENU-HEADER-BORDER-color);
+}
+#sidebar .searchbox {
+  border-color: var(--MENU-SEARCH-BOX-color);
+    background: var(--MENU-SEARCH-BG-color);
+}
+#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
+    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
+}
+#sidebar .searchbox * {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
+}
+
+#sidebar a {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
+
+#sidebar a:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+}
+
+#sidebar ul li.active > a {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
+}
+
+#sidebar hr {
+    border-color: var(--MENU-SECTION-HR-color);
+}
+
+.source {
+    color: var(--MAIN-TITLES-TEXT-color) !important;
+    text-align: center;
+    margin-top: -35px;
+    font-style: italic;
+}
+
+.labquestion {
+    background-color: var(--MENU-HEADER-BG-color);
+    color: white;
+    padding: 20px;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.labquestion .question {
+    font-weight: bold;
+    text-align: left;
+}
+
+.labquestion .input {
+    color: red;
+    padding: 20px;
+    width: 100%;
+}
+
+.labquestion .answer {
+    background-color: #b7c9e1;
+    color: var(--MAIN-TEXT-color);
+    text-align: center;
+}
+
+.labquestion .answer_answer {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.labquestion .hide_answer {
+    display: none;
+}
+
+.custompre {
+    background-color: #b7c9e1;
+    color: var(--MAIN-TITLES-TEXT-color) !important;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#typestates {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+tr.header{
+    background: var(--MENU-HEADER-BG-color);
+    color: white;
+    font-weight: bold;
+}
