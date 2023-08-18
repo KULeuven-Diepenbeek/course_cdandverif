@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Appendices on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/</link>
+    <description>Recent content in Appendices on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>QuestaSim Commanline Cheats</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/cheat/</link>
+      <pubDate>Fri, 07 Feb 2020 10:07:37 +0100</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/cheat/</guid>
+      <description>vsim options    Option Description     -c stay in command-line mode   -sv enable SystemVerilog    Transcript commands Compiling    Command Argument Description     vlib work  create a library work   vcom  compile VHDL source   vlog  compile Verilog source   vlog -sv compile SystemVerilog source    Simulating    Command Argument Description     vsim top start simulating entity top    -voptargs=”+acc” top start simulating entity top, and preserve the visibility of objects in the simulator   restart  restart the simulation    -f restart the simulation without the pop-up   run  runs the simulator    10ns runs the simulator for 10 ns   do thisandthat.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8 Final remarks on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/</link>
+    <description>Recent content in 8 Final remarks on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>801 Final remarks</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/801_final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/801_final/</guid>
+      <description>Final remarks In these labs it was tried to show a different, more professional approach to verification. If there is one take away from these labs it should be: there is more to testing than writing a testbench that successfully executes 1 testvector.
+Through the use SystemVerilog, all the good of object oriented programming can be brought into hardware verification.
+Using the coverage capabilities that are by-design in SystemVerilog, is a flexible way to achieve a bug-free, working implementation.</description>
+    </item>
+    
+  </channel>
+</rss>

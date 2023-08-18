@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 Getting your feet wet on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/</link>
+    <description>Recent content in 1 Getting your feet wet on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>100 ALU</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/100_alu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/100_alu/</guid>
+      <description>The ALU A number of exercises will use an arithmetic and logical unit (ALU). This component is described here. As you already know (at least by only looking at the name) it performs arithmetic operations and logical operations. The ALU that is used here, is based on the GameBoy&amp;rsquo;s custom take at the Z80.
+For this course two (or one) 8-bit operand(s) serve(s) as input and an 8-bit result is generated.</description>
+    </item>
+    
+    <item>
+      <title>101 Testing</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/101_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/101_testing/</guid>
+      <description>ALU testing In earlier years you have used the classical way of simulating your designs: with testbenches.
+Your design is instantiated in a higher entity and is referred to with the device under test (DUT). A number of stimuli are generated and are fed to the DUT. These stimuli can range from rather simple to very complex accurate models of certain signal sources.
+The output of the DUT is monitored to determine whether the implementation behaves as is expected (or hoped for 😃).</description>
+    </item>
+    
+    <item>
+      <title>102 SystemVerilog</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/102_systemverilog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/102_systemverilog/</guid>
+      <description>ALU testing - with SystemVerilog After the introductions of VHDL and Verilog in earlier courses, it is time to visit the new kind on the block: SystemVerilog. Although, new is relative. SystemVerilog has first appeared in 2002 and is a part of the IEEE standard since 2008. VHDL has first appeared in 1980 and Verilog in 1984.
+Both VHDL and Verilog are hardware description languages (HDL). The idea is you use the language to describe the design you made.</description>
+    </item>
+    
+    <item>
+      <title>103 Interfaces</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/103_interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/103_interfaces/</guid>
+      <description>Interfaces Well, all of the above sounds very nice and understandable, but if you think it through questions will arise (and will keep arising ever more 😉).
+The first question that needs answering before we can go to an example is: &amp;ldquo;How do you connect this software to the hardware ?&amp;rdquo;. The answer is very short, but way from simple: interfaces.
+Let&amp;rsquo;s take a look at the entity of ALU and try if we can figure this out.</description>
+    </item>
+    
+    <item>
+      <title>104 Hello world</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/104_helloworld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/104_helloworld/</guid>
+      <description>Hello world Let&amp;rsquo;s put the introduction to a pause and look at some code !!
+The example below shows a very simple test. The DUT only performs an inversion of the 8 incoming bits, when the data valid is high. The inverted result is stored in a register which is routed to the output of the DUT.
+The image below shows the architecture that is constructed for the example.</description>
+    </item>
+    
+    <item>
+      <title>105 Assignment 1</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/105_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/105_assignment/</guid>
+      <description>Assignment 1 The first assignment is to write, analogous to the given example, a simple testbench. The DUT is the ALU that was seen earlier.
+You only need to test the addition: Keep one operand fixed to 0x01 and have the other operand loop over all 256 possible values.
+After this chapter you should &amp;hellip;  ... have your development and simulation environment set up (efficiently) ... have gotten your hands dirty .</description>
+    </item>
+    
+  </channel>
+</rss>

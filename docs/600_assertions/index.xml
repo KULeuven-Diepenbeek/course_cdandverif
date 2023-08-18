@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6 Assertions on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/</link>
+    <description>Recent content in 6 Assertions on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>601 Assertions</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/601_assertions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/601_assertions/</guid>
+      <description>Assertions In the previous chapter, covergroups and coverpoints were introduced. These form one type of functional coverage: functional coverage focused on the data. As already mentioned, the other part is functional coverage focused on the control part of a design. This is done through assertions and is the topic of this chapter.
+Everything up until this point has been done outside of the DUT. Assertions are checks that are embedded IN the DUT.</description>
+    </item>
+    
+    <item>
+      <title>602 Sequences</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/602_sequences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/602_sequences/</guid>
+      <description>Sequences Next to defining immediate assertions and concurrent assertions, it is also very valuable if certain sequences can be evaluated. For example, if a condition A is true at a certain moment time, we want to assert that the next clockcycle condition B holds. This type of succession can be described using sequences.
+Sequences can be declared in modules, programs, interfaces, &amp;hellip; and can be used in assertions. The example below shows a sequence that:</description>
+    </item>
+    
+    <item>
+      <title>603 Implications</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/603_implications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/603_implications/</guid>
+      <description>Implications The sequences provide the verification engineer with a powerful tool. As with many things, the striking power is very much determined by the creativity and expertise of the wielder. The same holds for implications.
+Implications allow to implement &amp;hellip; well &amp;hellip; implications. For example If x is high, then y must high. The construction consists of an antecedent (the initial condition) and a consequent (the effect).
+Again there are two different types of implications.</description>
+    </item>
+    
+  </channel>
+</rss>

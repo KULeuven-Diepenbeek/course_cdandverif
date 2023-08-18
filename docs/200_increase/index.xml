@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 Adding some registers on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/</link>
+    <description>Recent content in 2 Adding some registers on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>201 Register file</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/201_registerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/201_registerfile/</guid>
+      <description>Register file With our first experiments done, it is time to add some registers. Typically a processor has an array of registers inside to be used during operation: the register file. The GameBoy CPU has eight 8-bit registers and two 16-bit registers. The 8-bit registers are labeled: A, B, C, D, E, F, H, and L. The 16-bit registers are the program counter (PC) and the stack pointer (SP). We&amp;rsquo;re not going to bother with the memory in which the programs reside, so we can forget about the latter two.</description>
+    </item>
+    
+    <item>
+      <title>202 Updating test</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/202_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/202_test/</guid>
+      <description>Updating the test Adding more features to the DUT is all nice, but this has to be reflected in the verification.
+As the DUT now looks different, the interface needs to be adapted. It no longer connects to the ALU, but to the gbprocessor.
+Initially, register A starts at value 0x00. When the instruction ADC H is executed, then register A gets incremented with 5.
+Have a closer look at the waveforms.</description>
+    </item>
+    
+    <item>
+      <title>203 Practice</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/203_practice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/203_practice/</guid>
+      <description>Practice This is no assignment but some practice. Start by copying the code you have from the first lab. Modify the new DUT so it incorporates the registers as described in this chapter.
+Now, experiment with the instructions. Try different values and verify that the DUT behaves the way it is intended to.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/</link>
+    <description>Recent content on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>000 Introduction</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/000_introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/000_introduction/</guid>
+      <description>Introduction In these lab series a deeper dive is taken into verification. Up until now, you&amp;rsquo;ll probably (and hopefully) have made a number of testbenches. These testbenches were focussed on the behaviour of a handful of components. It is still good practise to do this. When you&amp;rsquo;re making a hardware driver for a stepper motor, it&amp;rsquo;s only common sense that you test your design.
+Something that occurs with many beginning hardware designers is that they only test happy path.</description>
+    </item>
+    
+    <item>
+      <title>001 Organisation</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/001_organisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/001_organisation/</guid>
+      <description>Organisation These series of lab sessions will introduce you to SystemVerilog. Although this series will be taught during application colleges, the interested student can proceed at his/her own pace. If you are intrigued by the exercises, of if you prefer to continue working while the mindset is focused on the topic, you should find it possible to continue at a faster pace.
+If you have any question, suggestion, or problem with these labs, the forum on Toledo is your place-to-go.</description>
+    </item>
+    
+    <item>
+      <title>002 Lab</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/002_lab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/002_lab/</guid>
+      <description>Lab To tldr;
+To be able to run the simulation in these labs, dedicated software is required. As SystemVerilog is not an everyday language for simulation (or verification to be more precise), we have to rely on the 3 EDA (electronic design automation) giants in industry:
+ Mentor Graphics Cadence Synopsys  Due to license constraints these labs will done in QuestaSim (previously known as ModelSim), by Mentor Graphics.</description>
+    </item>
+    
+    <item>
+      <title>100 ALU</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/100_alu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/100_alu/</guid>
+      <description>The ALU A number of exercises will use an arithmetic and logical unit (ALU). This component is described here. As you already know (at least by only looking at the name) it performs arithmetic operations and logical operations. The ALU that is used here, is based on the GameBoy&amp;rsquo;s custom take at the Z80.
+For this course two (or one) 8-bit operand(s) serve(s) as input and an 8-bit result is generated.</description>
+    </item>
+    
+    <item>
+      <title>101 Testing</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/101_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/101_testing/</guid>
+      <description>ALU testing In earlier years you have used the classical way of simulating your designs: with testbenches.
+Your design is instantiated in a higher entity and is referred to with the device under test (DUT). A number of stimuli are generated and are fed to the DUT. These stimuli can range from rather simple to very complex accurate models of certain signal sources.
+The output of the DUT is monitored to determine whether the implementation behaves as is expected (or hoped for 😃).</description>
+    </item>
+    
+    <item>
+      <title>102 SystemVerilog</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/102_systemverilog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/102_systemverilog/</guid>
+      <description>ALU testing - with SystemVerilog After the introductions of VHDL and Verilog in earlier courses, it is time to visit the new kind on the block: SystemVerilog. Although, new is relative. SystemVerilog has first appeared in 2002 and is a part of the IEEE standard since 2008. VHDL has first appeared in 1980 and Verilog in 1984.
+Both VHDL and Verilog are hardware description languages (HDL). The idea is you use the language to describe the design you made.</description>
+    </item>
+    
+    <item>
+      <title>103 Interfaces</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/103_interfaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/103_interfaces/</guid>
+      <description>Interfaces Well, all of the above sounds very nice and understandable, but if you think it through questions will arise (and will keep arising ever more 😉).
+The first question that needs answering before we can go to an example is: &amp;ldquo;How do you connect this software to the hardware ?&amp;rdquo;. The answer is very short, but way from simple: interfaces.
+Let&amp;rsquo;s take a look at the entity of ALU and try if we can figure this out.</description>
+    </item>
+    
+    <item>
+      <title>104 Hello world</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/104_helloworld/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/104_helloworld/</guid>
+      <description>Hello world Let&amp;rsquo;s put the introduction to a pause and look at some code !!
+The example below shows a very simple test. The DUT only performs an inversion of the 8 incoming bits, when the data valid is high. The inverted result is stored in a register which is routed to the output of the DUT.
+The image below shows the architecture that is constructed for the example.</description>
+    </item>
+    
+    <item>
+      <title>105 Assignment 1</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/105_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/105_assignment/</guid>
+      <description>Assignment 1 The first assignment is to write, analogous to the given example, a simple testbench. The DUT is the ALU that was seen earlier.
+You only need to test the addition: Keep one operand fixed to 0x01 and have the other operand loop over all 256 possible values.
+After this chapter you should &amp;hellip;  ... have your development and simulation environment set up (efficiently) ... have gotten your hands dirty .</description>
+    </item>
+    
+    <item>
+      <title>201 Register file</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/201_registerfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/201_registerfile/</guid>
+      <description>Register file With our first experiments done, it is time to add some registers. Typically a processor has an array of registers inside to be used during operation: the register file. The GameBoy CPU has eight 8-bit registers and two 16-bit registers. The 8-bit registers are labeled: A, B, C, D, E, F, H, and L. The 16-bit registers are the program counter (PC) and the stack pointer (SP). We&amp;rsquo;re not going to bother with the memory in which the programs reside, so we can forget about the latter two.</description>
+    </item>
+    
+    <item>
+      <title>202 Updating test</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/202_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/202_test/</guid>
+      <description>Updating the test Adding more features to the DUT is all nice, but this has to be reflected in the verification.
+As the DUT now looks different, the interface needs to be adapted. It no longer connects to the ALU, but to the gbprocessor.
+Initially, register A starts at value 0x00. When the instruction ADC H is executed, then register A gets incremented with 5.
+Have a closer look at the waveforms.</description>
+    </item>
+    
+    <item>
+      <title>203 Practice</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/203_practice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/203_practice/</guid>
+      <description>Practice This is no assignment but some practice. Start by copying the code you have from the first lab. Modify the new DUT so it incorporates the registers as described in this chapter.
+Now, experiment with the instructions. Try different values and verify that the DUT behaves the way it is intended to.</description>
+    </item>
+    
+    <item>
+      <title>301 Layered testbench</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/301_layered_testbench/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/301_layered_testbench/</guid>
+      <description>Layered testbench Some of you might be thinking: &amp;ldquo;That assignment and those exercises did not differ too much from the classical approach.&amp;rdquo;. If so, you&amp;rsquo;re right. From this point on, however, the layered testbench will be climbed.
+The concept in SystemVerilog is to build a layered testbench:
+ Signal layer: The bottom-most layer is the signal layer. On this level only the DUT resides. The signals that going to and from the DUT represent actual signals.</description>
+    </item>
+    
+    <item>
+      <title>302 Adding a monitor</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/302_monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/302_monitor/</guid>
+      <description>Adding a monitor With our scaffolding starting to take form, it&amp;rsquo;s time to start filling the reserved spots. First up is the monitor. As you might recall from the previous section, the Monitor resides on the Command layer and receives data from the DUT. This way SystemVerilog can evaluate how the DUT handled the given inputs.
+class monitor; /* Virtual interface */ virtual gbprocessor_iface ifc; /* Constructor */ function new(virtual gbprocessor_iface ifc); this.</description>
+    </item>
+    
+    <item>
+      <title>303 Join or fail</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/303_joinorfail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/303_joinorfail/</guid>
+      <description>Join or fail So &amp;hellip; you noticed that the final exercise failed, didn&amp;rsquo;t you ?
+This is due to the fact that we are simulating hardware in software. More precisely, we&amp;rsquo;re simulating hardware that runs everything in parallel. The simulation is done in software, which typically is sequential.
+Now how to fix this ?
+Enter concurrent processes To achieve support for parallel pieces of software, threads can be used. In Verilog2001 the fork&amp;hellip;join construct was added.</description>
+    </item>
+    
+    <item>
+      <title>304 Transactions</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/304_transactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/304_transactions/</guid>
+      <description>Transactions Now we&amp;rsquo;re truly going OO with this testbench. Up until this point, 2 classes (that did something useful) were added : driver and monitor. Adding more classes for generators, checkers, &amp;hellip; should not be too much of a challenge, from a coding point-of-view.
+The structure, however, should become clear by now:
+ The generator generates a testvector This testvector is sent to the driver and the checker The driver translates the input to pin-wiggles    The monitor translates the output pin-wiggles to something readable.</description>
+    </item>
+    
+    <item>
+      <title>305 Mailboxes</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/305_mailboxes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/305_mailboxes/</guid>
+      <description>Mailboxes Up until this point the layered testbench was presented: there are different layers each with their own purpose. Also: transactions were shortly discussed. Next up &amp;hellip; handing out transactions between different layers.
+Mailbox is a built-in class. It works similar to an actual (single direction) mailbox. It&amp;rsquo;s worth pointing out that a mailbox operates like a FIFO (whereas an actual mailbox might operate as a LIFO (?)) and it has the following methods:</description>
+    </item>
+    
+    <item>
+      <title>306 Assignment 2</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/306_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/306_assignment/</guid>
+      <description>Assignment 2 The second assignment is to build your first layered testbench. The DUT, again, is the ALU with the register file that was seen earlier. The test is assumed to be done when the scoreboard has received 100 test results, irrespective whether or not the results were correct. When this is amount of tests is reached, the scoreboard should print a summary of the obtained results.
+A number of small remarks:</description>
+    </item>
+    
+    <item>
+      <title>307 Checker &amp; scoreboard</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/307_scoreboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/307_scoreboard/</guid>
+      <description>A number of steps on the OO-ladder have already been taken. First of all, there is the interface that does all the pin-interconnecting. One layer above there are the driver and the monitor. These two components translate between the software world and the hardware world.
+The driver is instructed by the generator, through the use of transactions. In this final section the path will be completed.
+First, there is the checker, that verifies the result as seen by the monitor against a golden value.</description>
+    </item>
+    
+    <item>
+      <title>308 Golden reference</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/308_golden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/308_golden/</guid>
+      <description>Golden reference In larger design houses there is a strict separation between the designers and verifiers. Both are given a &amp;lsquo;requirements document&amp;rsquo; and are not allowed to talk to each other. This is for the simple reason that having two independent interpretations might point out errors in each others&amp;rsquo;s interpretation (or in the &amp;lsquo;requirements document&amp;rsquo;).
+A well-tested technique to obtain the right answer from a model. The stimuli, that are given to the DUT are also given to the model.</description>
+    </item>
+    
+    <item>
+      <title>401 Randomisation</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/401_randomisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/401_randomisation/</guid>
+      <description>Randomisation From the classical approach of testbenches, you already know that you best test your design with different values.
+In the previous part, we validated that 0 + 5 equals 5. Although repeating a test with same value could learn something, after a few correct iterations, however, it can be determined that the design knows how to handle that instruction.
+In this part the instruction needs to be randomised. When working within a class declaration, making a data member randomisable is very straightforward by using the keywords rand or randc.</description>
+    </item>
+    
+    <item>
+      <title>402 Constraints</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/402_constraint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/402_constraint/</guid>
+      <description>Constraints Time for another Buzz-word lightning round: SystemVerilog supports Constrained Random Verification. If you simply breakdown the words, it becomes quite clear already. Verification should be clear. Random, after the previous section, should also ring a bell. Then there is the third word: Constrained.
+Generating random numbers to apply as stimuli is useful. It helps the verification engineer to touch on corner cases that might be missed while trying come up with all test vectors himself/herself.</description>
+    </item>
+    
+    <item>
+      <title>403 DP and CP</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/403_dpandcp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/403_dpandcp/</guid>
+      <description>DP and CP A natural tendency you might have (I know I have) is to start applying different test vectors: &amp;ldquo;Ok, my design knows 20 + 30, but does it also know 21 + 30 ?&amp;rdquo;
+Randomising the inputs is a logical next step. Although this step is useful, it&amp;rsquo;s far from sufficient.
+Years ago in this study program you were introduced to hardware design. Here you learned about the datapath (DP) and the control path (CP).</description>
+    </item>
+    
+    <item>
+      <title>404 Assignment 3</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/404_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/404_assignment/</guid>
+      <description>Assignment 3 The third assignment focuses on the Transaction-class, but effects most components on the functional layer. As a reminder, objects of the transaction class are generated in the generator and are sent to the Driver and the Checker. The class must have the class members as stated below. The new and ToString methods should remain unmodified.
+class transaction; rand bit [1:0] instruction_type; rand bit [2:0] instruction_selection; rand bit [2:0] operand_selection; function new(); this.</description>
+    </item>
+    
+    <item>
+      <title>501 Coverage</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/501_coverage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/501_coverage/</guid>
+      <description>Coverage By now, hopefully, you are starting to see the potential of SystemVerilog. Up until this point a lot of concepts were introduced and code has already been written, but take a look at the amount of tests that were done. In the final assignment a total of 2&amp;rsquo;000 different testvectors were applied to the DUT.
+A question that now might arise is: How much verification is enough ?</description>
+    </item>
+    
+    <item>
+      <title>502 Functional coverage</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/502_funccoverage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/502_funccoverage/</guid>
+      <description>Functional coverage SystemVerilog has two types of functional coverage. One type is data-oriented and falls within Covergroups. The other type is control-oriented and falls within Assertions. This chapter handles covergroups and the next chapter handles Assertions.
+Covergroups Covergroups can exists out of multiple coverpoints. A coverpoint is a specification of an expression. That doesn&amp;rsquo;t sound very clear, so let&amp;rsquo;s try to illustrate this with an example.
+In our earlier example the operation property is a bit vector with a width of 5.</description>
+    </item>
+    
+    <item>
+      <title>503 Cross coverage</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/503_crosscoverage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/503_crosscoverage/</guid>
+      <description>Cross coverage In the next example (cg2) the covergroup has two coverpoints: cp_ALU_instruction_type and cp_ALU_instruction_type. The former looks at the type of instruction while the latter focusses on the three least significant bits, which indicated the second operand. Also note that, other than putting 2 coverpoints on a single signal, putting coverpoints is also possible. Additionally the number of times each bin needs to be hit to achieve a 100% goal is also increased to 100.</description>
+    </item>
+    
+    <item>
+      <title>504 More on bins</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/504_morebins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/504_morebins/</guid>
+      <description>More on bins The configuration of the bins has a huge influence on the coverage. This makes constraining the bins a delicate job. SystemVerilog therefore offers quite some flexibility to define the bins. Below, a couple of features/techniques are highlighted.
+Explicit bins bins a = {1, 2};  
+Bin a is hit when the value is 1 or 2.
+
+
+bins b[3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};</description>
+    </item>
+    
+    <item>
+      <title>505 Assignment 4</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/505_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/505_assignment/</guid>
+      <description>Assignment 4 This assignment works in an cumulative way. Try to obtain 100% coverage and, upon reaching 100%, stop the simulation. For this exercise it is decided that 100% coverage is reached when:
+ at least 100 XORs are executed after immediately after a SBC at least 1000 CPs are executed at least 20 SUB instructions should be done with register E the amount of arithmetic operations should roughly be 3 times the amount of logical operations at least 327 logical instructions are done without register A  To have your simulation halt after achieving 100% coverage, and no longer on a certain number of operations, there is a built-in function $get_coverage( ).</description>
+    </item>
+    
+    <item>
+      <title>601 Assertions</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/601_assertions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/601_assertions/</guid>
+      <description>Assertions In the previous chapter, covergroups and coverpoints were introduced. These form one type of functional coverage: functional coverage focused on the data. As already mentioned, the other part is functional coverage focused on the control part of a design. This is done through assertions and is the topic of this chapter.
+Everything up until this point has been done outside of the DUT. Assertions are checks that are embedded IN the DUT.</description>
+    </item>
+    
+    <item>
+      <title>602 Sequences</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/602_sequences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/602_sequences/</guid>
+      <description>Sequences Next to defining immediate assertions and concurrent assertions, it is also very valuable if certain sequences can be evaluated. For example, if a condition A is true at a certain moment time, we want to assert that the next clockcycle condition B holds. This type of succession can be described using sequences.
+Sequences can be declared in modules, programs, interfaces, &amp;hellip; and can be used in assertions. The example below shows a sequence that:</description>
+    </item>
+    
+    <item>
+      <title>603 Implications</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/603_implications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/603_implications/</guid>
+      <description>Implications The sequences provide the verification engineer with a powerful tool. As with many things, the striking power is very much determined by the creativity and expertise of the wielder. The same holds for implications.
+Implications allow to implement &amp;hellip; well &amp;hellip; implications. For example If x is high, then y must high. The construction consists of an antecedent (the initial condition) and a consequent (the effect).
+Again there are two different types of implications.</description>
+    </item>
+    
+    <item>
+      <title>801 Final remarks</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/801_final/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/801_final/</guid>
+      <description>Final remarks In these labs it was tried to show a different, more professional approach to verification. If there is one take away from these labs it should be: there is more to testing than writing a testbench that successfully executes 1 testvector.
+Through the use SystemVerilog, all the good of object oriented programming can be brought into hardware verification.
+Using the coverage capabilities that are by-design in SystemVerilog, is a flexible way to achieve a bug-free, working implementation.</description>
+    </item>
+    
+    <item>
+      <title>QuestaSim Commanline Cheats</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/cheat/</link>
+      <pubDate>Fri, 07 Feb 2020 10:07:37 +0100</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/cheat/</guid>
+      <description>vsim options    Option Description     -c stay in command-line mode   -sv enable SystemVerilog    Transcript commands Compiling    Command Argument Description     vlib work  create a library work   vcom  compile VHDL source   vlog  compile Verilog source   vlog -sv compile SystemVerilog source    Simulating    Command Argument Description     vsim top start simulating entity top    -voptargs=”+acc” top start simulating entity top, and preserve the visibility of objects in the simulator   restart  restart the simulation    -f restart the simulation without the pop-up   run  runs the simulator    10ns runs the simulator for 10 ns   do thisandthat.</description>
+    </item>
+    
+  </channel>
+</rss>

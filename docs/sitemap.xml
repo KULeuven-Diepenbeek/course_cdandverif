@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/000_introduction/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/001_organisation/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/002_lab/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/100_alu/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/101_testing/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/102_systemverilog/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/103_interfaces/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/104_helloworld/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/100_wetfeet/105_assignment/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/201_registerfile/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/202_test/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/200_increase/203_practice/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/301_layered_testbench/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/302_monitor/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/303_joinorfail/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/304_transactions/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/305_mailboxes/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/306_assignment/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/307_scoreboard/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/308_golden/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/401_randomisation/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/402_constraint/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/403_dpandcp/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/404_assignment/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/501_coverage/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/502_funccoverage/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/503_crosscoverage/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/504_morebins/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/500_coverage/505_assignment/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/601_assertions/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/602_sequences/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/600_assertions/603_implications/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/700_project/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/800_finalremarks/801_final/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/appendices/cheat/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/</loc>
+    <lastmod>2023-08-18T10:41:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kuleuven-diepenbeek.github.io/course_cdandverif/tags/</loc>
+  </url>
+  
+</urlset>

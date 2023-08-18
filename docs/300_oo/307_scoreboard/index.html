@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>307 Checker &amp; scoreboard :: Chip Design and Verification</title>
+
+    
+    <link href="../../css/nucleus.css?1692348126" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/hybrid.css?1692348126" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1692348126" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1692348126" rel="stylesheet">
+    <link href="../../css/theme.css?1692348126" rel="stylesheet">
+    <link href="../../css/tabs.css?1692348126" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1692348126" rel="stylesheet">
+    
+    <link href="../../css/theme-kul.css?1692348126" rel="stylesheet">
+    
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1692348126"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+<script src=../../js/exercises.js></script> 
+  </head>
+  <body class="" data-url="/300_oo/307_scoreboard/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../img/style/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../img/style/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1692348126"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1692348126"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_cdandverif\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1692348126"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/000_intro/" title="0 Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../000_intro/">
+          0 Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/000_introduction/" title="000 Introduction" class="dd-item ">
+        <a href="../../000_intro/000_introduction/">
+        000 Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/001_organisation/" title="001 Organisation" class="dd-item ">
+        <a href="../../000_intro/001_organisation/">
+        001 Organisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/002_lab/" title="002 Lab" class="dd-item ">
+        <a href="../../000_intro/002_lab/">
+        002 Lab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/100_wetfeet/" title="1 Getting your feet wet" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../100_wetfeet/">
+          1 Getting your feet wet
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/100_alu/" title="100 ALU" class="dd-item ">
+        <a href="../../100_wetfeet/100_alu/">
+        100 ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/101_testing/" title="101 Testing" class="dd-item ">
+        <a href="../../100_wetfeet/101_testing/">
+        101 Testing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/102_systemverilog/" title="102 SystemVerilog" class="dd-item ">
+        <a href="../../100_wetfeet/102_systemverilog/">
+        102 SystemVerilog
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/103_interfaces/" title="103 Interfaces" class="dd-item ">
+        <a href="../../100_wetfeet/103_interfaces/">
+        103 Interfaces
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/104_helloworld/" title="104 Hello world" class="dd-item ">
+        <a href="../../100_wetfeet/104_helloworld/">
+        104 Hello world
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/105_assignment/" title="105 Assignment 1" class="dd-item ">
+        <a href="../../100_wetfeet/105_assignment/">
+        105 Assignment 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/200_increase/" title="2 Adding some registers" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../200_increase/">
+          2 Adding some registers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/201_registerfile/" title="201 Register file" class="dd-item ">
+        <a href="../../200_increase/201_registerfile/">
+        201 Register file
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/202_test/" title="202 Updating test" class="dd-item ">
+        <a href="../../200_increase/202_test/">
+        202 Updating test
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/203_practice/" title="203 Practice" class="dd-item ">
+        <a href="../../200_increase/203_practice/">
+        203 Practice
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/300_oo/" title="3 Climbing the OO ladder" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../300_oo/">
+          3 Climbing the OO ladder
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/301_layered_testbench/" title="301 Layered testbench" class="dd-item ">
+        <a href="../../300_oo/301_layered_testbench/">
+        301 Layered testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/302_monitor/" title="302 Adding a monitor" class="dd-item ">
+        <a href="../../300_oo/302_monitor/">
+        302 Adding a monitor
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/303_joinorfail/" title="303 Join or fail" class="dd-item ">
+        <a href="../../300_oo/303_joinorfail/">
+        303 Join or fail
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/304_transactions/" title="304 Transactions" class="dd-item ">
+        <a href="../../300_oo/304_transactions/">
+        304 Transactions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/305_mailboxes/" title="305 Mailboxes" class="dd-item ">
+        <a href="../../300_oo/305_mailboxes/">
+        305 Mailboxes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/306_assignment/" title="306 Assignment 2" class="dd-item ">
+        <a href="../../300_oo/306_assignment/">
+        306 Assignment 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/307_scoreboard/" title="307 Checker &amp; scoreboard" class="dd-item active">
+        <a href="../../300_oo/307_scoreboard/">
+        307 Checker &amp; scoreboard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/308_golden/" title="308 Golden reference" class="dd-item ">
+        <a href="../../300_oo/308_golden/">
+        308 Golden reference
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_rand/" title="4 Randomisation" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_rand/">
+          4 Randomisation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/401_randomisation/" title="401 Randomisation" class="dd-item ">
+        <a href="../../400_rand/401_randomisation/">
+        401 Randomisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/402_constraint/" title="402 Constraints" class="dd-item ">
+        <a href="../../400_rand/402_constraint/">
+        402 Constraints
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/403_dpandcp/" title="403 DP and CP" class="dd-item ">
+        <a href="../../400_rand/403_dpandcp/">
+        403 DP and CP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/404_assignment/" title="404 Assignment 3" class="dd-item ">
+        <a href="../../400_rand/404_assignment/">
+        404 Assignment 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/500_coverage/" title="5 Coverage" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../500_coverage/">
+          5 Coverage
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/501_coverage/" title="501 Coverage" class="dd-item ">
+        <a href="../../500_coverage/501_coverage/">
+        501 Coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/502_funccoverage/" title="502 Functional coverage" class="dd-item ">
+        <a href="../../500_coverage/502_funccoverage/">
+        502 Functional coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/503_crosscoverage/" title="503 Cross coverage" class="dd-item ">
+        <a href="../../500_coverage/503_crosscoverage/">
+        503 Cross coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/504_morebins/" title="504 More on bins" class="dd-item ">
+        <a href="../../500_coverage/504_morebins/">
+        504 More on bins
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/505_assignment/" title="505 Assignment 4" class="dd-item ">
+        <a href="../../500_coverage/505_assignment/">
+        505 Assignment 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/600_assertions/" title="6 Assertions" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../600_assertions/">
+          6 Assertions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/601_assertions/" title="601 Assertions" class="dd-item ">
+        <a href="../../600_assertions/601_assertions/">
+        601 Assertions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/602_sequences/" title="602 Sequences" class="dd-item ">
+        <a href="../../600_assertions/602_sequences/">
+        602 Sequences
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/603_implications/" title="603 Implications" class="dd-item ">
+        <a href="../../600_assertions/603_implications/">
+        603 Implications
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/700_project/" title="7 Project" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../700_project/">
+          7 Project
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/800_finalremarks/" title="8 Final remarks" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../800_finalremarks/">
+          8 Final remarks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/800_finalremarks/801_final/" title="801 Final remarks" class="dd-item ">
+        <a href="../../800_finalremarks/801_final/">
+        801 Final remarks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/appendices/" title="Appendices" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../appendices/">
+          Appendices
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/appendices/cheat/" title="QuestaSim Commanline Cheats" class="dd-item ">
+        <a href="../../appendices/cheat/">
+        QuestaSim Commanline Cheats
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=3467&amp;n=4&amp;t=04#anker46108"><i class='fa fa-university'></i> ECTS Sheet</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Chip Design and Verification</a> > <a href='../../300_oo/'>3 Climbing the OO ladder</a> > 307 Checker & scoreboard
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+<p>A number of steps on the OO-ladder have already been taken. First of all, there is the <strong>interface</strong> that does all the pin-interconnecting. One layer above there are the <strong>driver</strong> and the <strong>monitor</strong>. These two components translate between the software world and the hardware world.</p>
+
+<p>The <strong>driver</strong> is instructed by the <strong>generator</strong>, through the use of <strong>transactions</strong>. In this final section the path will be completed.</p>
+
+<p>First, there is the <strong>checker</strong>, that verifies the result as seen by the monitor against a <em>golden value</em>.</p>
+
+<p>And, finally, there is a <strong>scoreboard</strong> that collects all the results.</p>
+
+<p>Neither of these components will introduce new concepts, but for the sake of completeness they are discussed here. However, coming up with the <em>golden reference</em> will require some more work.</p>
+
+<!-- 
+<div class="notices tip" ><p>It is pointed out that there is no precise separation of tasks to certain components. In general it is clear what each compent does, but the exact borders between tasks are not set in stone. What is taught here is a default approach.</p>
+</div>
+ -->
+
+<h1 id="checker">Checker</h1>
+
+<div class="multiHcolumn">
+  
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;transaction.sv&#34;</span>
+
+<span style="color:#66d9ef">class</span> checkers;
+
+  mailbox #(transaction) gen2che;
+  mailbox #(<span style="color:#66d9ef">shortint</span>) mon2che;
+  mailbox #(<span style="color:#66d9ef">bit</span>) che2scb;
+
+  <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>(mailbox #(<span style="color:#66d9ef">shortint</span>) m2c, mailbox #(<span style="color:#66d9ef">bit</span>) c2s);
+    <span style="color:#66d9ef">this</span>.mon2che <span style="color:#f92672">=</span> m2c;
+    <span style="color:#66d9ef">this</span>.che2scb <span style="color:#f92672">=</span> c2s;
+  <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+  <span style="color:#66d9ef">task</span> run; 
+    <span style="color:#66d9ef">shortint</span> expected_result, received_result;
+
+    <span style="color:#66d9ef">string</span> s;
+
+    $timeformat(<span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#34; ns&#34;</span> , <span style="color:#ae81ff">10</span>);
+    s <span style="color:#f92672">=</span> $sformatf(<span style="color:#e6db74">&#34;[%t | CHE] I will start checking&#34;</span>, $time);
+    $display(s);
+
+    <span style="color:#66d9ef">forever</span> 
+    <span style="color:#66d9ef">begin</span>  
+      <span style="color:#66d9ef">this</span>.mon2che.get(received_result);
+
+      <span style="color:#75715e">/* do something to get the.
+</span><span style="color:#75715e">         For now, have this placeholder */</span>
+      received_result <span style="color:#f92672">=</span> expected_result;
+
+      <span style="color:#66d9ef">if</span> (received_result <span style="color:#f92672">==</span> expected_result)
+      <span style="color:#66d9ef">begin</span>
+        <span style="color:#66d9ef">this</span>.che2scb.put(<span style="color:#66d9ef">bit</span>&#39;(<span style="color:#ae81ff">1</span>));
+      <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">begin</span>
+        <span style="color:#66d9ef">this</span>.che2scb.put(<span style="color:#66d9ef">bit</span>&#39;(<span style="color:#ae81ff">0</span>));
+      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">endtask</span>
+  
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> checkers
+</code></pre></div>
+
+<p></div><br />
+<div class="column">
+  <p>The <strong>checker</strong> uses multiple mailboxes. There is one <em>incoming</em> communication channel from the generator. This will be required to be able to determine the <em>golden value</em>; there is another <em>incoming</em> channel from the monitor for providing the obtained result, and finally, there is one <em>outgoing</em> channel to the scoreboard (for keeping score).</p></p>
+
+<div class="notices warning" ><p>Please note that <strong>checker</strong> is a keyword in SystemVerilog. Hence, the name of the class is checker<u><strong>s</strong></u>.</p>
+</div>
+
+<p>When the expected outcome, or <em>golden value</em> is determined, the checker compares whether or not this value matches with obtained result. In the example, there is simply a placeholder.</p>
+
+<p>Its decision is then sent to the <strong>scoreboard</strong>. Note the type to which the <strong>che2scb</strong> mailbox is fixed.</p>
+
+<p></div></p>
+
+<p></div></p>
+
+<h1 id="scoreboard">Scoreboard</h1>
+
+<div class="multiHcolumn">
+  
+<div class="column">
+  <p>An example of a scoreboard is given here. There should be nothing out-of-the-usual here.</p>
+
+<p>One point that is worth mentioning is the conclusion that all blocks up-until-this-point are running <strong>forever</strong>. (Or they will be if you look at the entire code for this example 😉)</p>
+
+<p>A closer look at the scoreboard shows that this run( ) function only runs for a certain amount of test vectors.</p>
+
+</div>    
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> scoreboard;
+
+  mailbox #(<span style="color:#66d9ef">bit</span>) che2scb;
+
+  <span style="color:#66d9ef">int</span> NO_tests;
+
+  <span style="color:#66d9ef">int</span> no_tests_done;
+  <span style="color:#66d9ef">int</span> no_tests_ok;
+  <span style="color:#66d9ef">int</span> no_tests_nok;
+
+  <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>(mailbox c2s);
+    <span style="color:#66d9ef">this</span>.che2scb <span style="color:#f92672">=</span> c2s;
+    NO_tests <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    no_tests_done <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    no_tests_ok <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    no_tests_nok <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+
+  <span style="color:#66d9ef">task</span> run(<span style="color:#66d9ef">int</span> NOT);
+    <span style="color:#66d9ef">byte</span> result;
+    <span style="color:#66d9ef">string</span> s;
+    <span style="color:#66d9ef">this</span>.NO_tests <span style="color:#f92672">=</span> NOT;
+
+    $timeformat(<span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#34; ns&#34;</span> , <span style="color:#ae81ff">10</span>);
+    s <span style="color:#f92672">=</span> $sformatf(<span style="color:#e6db74">&#34;[%t | SCB] I will start keeping score&#34;</span>, $time);
+    $display(s);
+
+    <span style="color:#66d9ef">while</span> (<span style="color:#66d9ef">this</span>.no_tests_done <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span>.NO_tests)
+    <span style="color:#66d9ef">begin</span>
+      <span style="color:#66d9ef">this</span>.che2scb.get(result);
+
+      no_tests_done<span style="color:#f92672">++</span>; 
+      
+      <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+      <span style="color:#66d9ef">begin</span> 
+        no_tests_ok<span style="color:#f92672">++</span>; 
+        <span style="color:#75715e">//$display(&#34;[SCB] successful test registered&#34;);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">end</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">begin</span>
+        no_tests_nok<span style="color:#f92672">++</span>;
+        <span style="color:#75715e">//$display(&#34;[SCB] unsuccessful test registered&#34;);
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span> <span style="color:#75715e">/* while*/</span>
+  <span style="color:#66d9ef">endtask</span> <span style="color:#f92672">:</span> run
+
+
+  <span style="color:#66d9ef">task</span> showReport;
+    $display(<span style="color:#e6db74">&#34;[SCB] Test report&#34;</span>);
+    $display(<span style="color:#e6db74">&#34;[SCB] ------------&#34;</span>);
+    $display(<span style="color:#e6db74">&#34;[SCB] # tests done         : %0d&#34;</span>, <span style="color:#66d9ef">this</span>.no_tests_done);
+    $display(<span style="color:#e6db74">&#34;[SCB] # tests ok           : %0d&#34;</span>, <span style="color:#66d9ef">this</span>.no_tests_ok);
+    $display(<span style="color:#e6db74">&#34;[SCB] # tests failed       : %0d&#34;</span>, <span style="color:#66d9ef">this</span>.no_tests_nok);
+    $display(<span style="color:#e6db74">&#34;[SCB] # tests success rate : %0.2f&#34;</span>, <span style="color:#66d9ef">this</span>.no_tests_ok<span style="color:#f92672">/</span><span style="color:#66d9ef">this</span>.no_tests_done<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>);
+  <span style="color:#66d9ef">endtask</span> <span style="color:#f92672">:</span> showReport
+
+
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> scoreboard
+</code></pre></div>
+
+<p></div></p>
+
+<p></div></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+            </div> 
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../300_oo/306_assignment/" title="306 Assignment 2"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../300_oo/308_golden/" title="308 Golden reference" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1692348126"></script>
+    <script src="../../js/jquery.sticky.js?1692348126"></script>
+    <script src="../../js/featherlight.min.js?1692348126"></script>
+    <script src="../../js/highlight.pack.js?1692348126"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1692348126"></script>
+    <script src="../../js/learn.js?1692348126"></script>
+    <script src="../../js/hugo-learn.js?1692348126"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1692348126"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

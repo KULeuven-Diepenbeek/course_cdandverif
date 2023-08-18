@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 Climbing the OO ladder on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/</link>
+    <description>Recent content in 3 Climbing the OO ladder on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>301 Layered testbench</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/301_layered_testbench/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/301_layered_testbench/</guid>
+      <description>Layered testbench Some of you might be thinking: &amp;ldquo;That assignment and those exercises did not differ too much from the classical approach.&amp;rdquo;. If so, you&amp;rsquo;re right. From this point on, however, the layered testbench will be climbed.
+The concept in SystemVerilog is to build a layered testbench:
+ Signal layer: The bottom-most layer is the signal layer. On this level only the DUT resides. The signals that going to and from the DUT represent actual signals.</description>
+    </item>
+    
+    <item>
+      <title>302 Adding a monitor</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/302_monitor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/302_monitor/</guid>
+      <description>Adding a monitor With our scaffolding starting to take form, it&amp;rsquo;s time to start filling the reserved spots. First up is the monitor. As you might recall from the previous section, the Monitor resides on the Command layer and receives data from the DUT. This way SystemVerilog can evaluate how the DUT handled the given inputs.
+class monitor; /* Virtual interface */ virtual gbprocessor_iface ifc; /* Constructor */ function new(virtual gbprocessor_iface ifc); this.</description>
+    </item>
+    
+    <item>
+      <title>303 Join or fail</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/303_joinorfail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/303_joinorfail/</guid>
+      <description>Join or fail So &amp;hellip; you noticed that the final exercise failed, didn&amp;rsquo;t you ?
+This is due to the fact that we are simulating hardware in software. More precisely, we&amp;rsquo;re simulating hardware that runs everything in parallel. The simulation is done in software, which typically is sequential.
+Now how to fix this ?
+Enter concurrent processes To achieve support for parallel pieces of software, threads can be used. In Verilog2001 the fork&amp;hellip;join construct was added.</description>
+    </item>
+    
+    <item>
+      <title>304 Transactions</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/304_transactions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/304_transactions/</guid>
+      <description>Transactions Now we&amp;rsquo;re truly going OO with this testbench. Up until this point, 2 classes (that did something useful) were added : driver and monitor. Adding more classes for generators, checkers, &amp;hellip; should not be too much of a challenge, from a coding point-of-view.
+The structure, however, should become clear by now:
+ The generator generates a testvector This testvector is sent to the driver and the checker The driver translates the input to pin-wiggles    The monitor translates the output pin-wiggles to something readable.</description>
+    </item>
+    
+    <item>
+      <title>305 Mailboxes</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/305_mailboxes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/305_mailboxes/</guid>
+      <description>Mailboxes Up until this point the layered testbench was presented: there are different layers each with their own purpose. Also: transactions were shortly discussed. Next up &amp;hellip; handing out transactions between different layers.
+Mailbox is a built-in class. It works similar to an actual (single direction) mailbox. It&amp;rsquo;s worth pointing out that a mailbox operates like a FIFO (whereas an actual mailbox might operate as a LIFO (?)) and it has the following methods:</description>
+    </item>
+    
+    <item>
+      <title>306 Assignment 2</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/306_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/306_assignment/</guid>
+      <description>Assignment 2 The second assignment is to build your first layered testbench. The DUT, again, is the ALU with the register file that was seen earlier. The test is assumed to be done when the scoreboard has received 100 test results, irrespective whether or not the results were correct. When this is amount of tests is reached, the scoreboard should print a summary of the obtained results.
+A number of small remarks:</description>
+    </item>
+    
+    <item>
+      <title>307 Checker &amp; scoreboard</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/307_scoreboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/307_scoreboard/</guid>
+      <description>A number of steps on the OO-ladder have already been taken. First of all, there is the interface that does all the pin-interconnecting. One layer above there are the driver and the monitor. These two components translate between the software world and the hardware world.
+The driver is instructed by the generator, through the use of transactions. In this final section the path will be completed.
+First, there is the checker, that verifies the result as seen by the monitor against a golden value.</description>
+    </item>
+    
+    <item>
+      <title>308 Golden reference</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/308_golden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/300_oo/308_golden/</guid>
+      <description>Golden reference In larger design houses there is a strict separation between the designers and verifiers. Both are given a &amp;lsquo;requirements document&amp;rsquo; and are not allowed to talk to each other. This is for the simple reason that having two independent interpretations might point out errors in each others&amp;rsquo;s interpretation (or in the &amp;lsquo;requirements document&amp;rsquo;).
+A well-tested technique to obtain the right answer from a model. The stimuli, that are given to the DUT are also given to the model.</description>
+    </item>
+    
+  </channel>
+</rss>

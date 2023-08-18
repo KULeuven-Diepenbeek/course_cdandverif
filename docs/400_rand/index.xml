@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4 Randomisation on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/</link>
+    <description>Recent content in 4 Randomisation on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>401 Randomisation</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/401_randomisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/401_randomisation/</guid>
+      <description>Randomisation From the classical approach of testbenches, you already know that you best test your design with different values.
+In the previous part, we validated that 0 + 5 equals 5. Although repeating a test with same value could learn something, after a few correct iterations, however, it can be determined that the design knows how to handle that instruction.
+In this part the instruction needs to be randomised. When working within a class declaration, making a data member randomisable is very straightforward by using the keywords rand or randc.</description>
+    </item>
+    
+    <item>
+      <title>402 Constraints</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/402_constraint/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/402_constraint/</guid>
+      <description>Constraints Time for another Buzz-word lightning round: SystemVerilog supports Constrained Random Verification. If you simply breakdown the words, it becomes quite clear already. Verification should be clear. Random, after the previous section, should also ring a bell. Then there is the third word: Constrained.
+Generating random numbers to apply as stimuli is useful. It helps the verification engineer to touch on corner cases that might be missed while trying come up with all test vectors himself/herself.</description>
+    </item>
+    
+    <item>
+      <title>403 DP and CP</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/403_dpandcp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/403_dpandcp/</guid>
+      <description>DP and CP A natural tendency you might have (I know I have) is to start applying different test vectors: &amp;ldquo;Ok, my design knows 20 + 30, but does it also know 21 + 30 ?&amp;rdquo;
+Randomising the inputs is a logical next step. Although this step is useful, it&amp;rsquo;s far from sufficient.
+Years ago in this study program you were introduced to hardware design. Here you learned about the datapath (DP) and the control path (CP).</description>
+    </item>
+    
+    <item>
+      <title>404 Assignment 3</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/404_assignment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/400_rand/404_assignment/</guid>
+      <description>Assignment 3 The third assignment focuses on the Transaction-class, but effects most components on the functional layer. As a reminder, objects of the transaction class are generated in the generator and are sent to the Driver and the Checker. The class must have the class members as stated below. The new and ToString methods should remain unmodified.
+class transaction; rand bit [1:0] instruction_type; rand bit [2:0] instruction_selection; rand bit [2:0] operand_selection; function new(); this.</description>
+    </item>
+    
+  </channel>
+</rss>

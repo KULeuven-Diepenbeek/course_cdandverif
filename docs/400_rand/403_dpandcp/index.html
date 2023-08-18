@@ -1,0 +1,2223 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>403 DP and CP :: Chip Design and Verification</title>
+
+    
+    <link href="../../css/nucleus.css?1692348126" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/hybrid.css?1692348126" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1692348126" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1692348126" rel="stylesheet">
+    <link href="../../css/theme.css?1692348126" rel="stylesheet">
+    <link href="../../css/tabs.css?1692348126" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1692348126" rel="stylesheet">
+    
+    <link href="../../css/theme-kul.css?1692348126" rel="stylesheet">
+    
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1692348126"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+<script src=../../js/exercises.js></script> 
+  </head>
+  <body class="" data-url="/400_rand/403_dpandcp/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../img/style/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../img/style/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1692348126"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1692348126"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_cdandverif\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1692348126"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/000_intro/" title="0 Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../000_intro/">
+          0 Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/000_introduction/" title="000 Introduction" class="dd-item ">
+        <a href="../../000_intro/000_introduction/">
+        000 Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/001_organisation/" title="001 Organisation" class="dd-item ">
+        <a href="../../000_intro/001_organisation/">
+        001 Organisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/002_lab/" title="002 Lab" class="dd-item ">
+        <a href="../../000_intro/002_lab/">
+        002 Lab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/100_wetfeet/" title="1 Getting your feet wet" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../100_wetfeet/">
+          1 Getting your feet wet
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/100_alu/" title="100 ALU" class="dd-item ">
+        <a href="../../100_wetfeet/100_alu/">
+        100 ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/101_testing/" title="101 Testing" class="dd-item ">
+        <a href="../../100_wetfeet/101_testing/">
+        101 Testing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/102_systemverilog/" title="102 SystemVerilog" class="dd-item ">
+        <a href="../../100_wetfeet/102_systemverilog/">
+        102 SystemVerilog
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/103_interfaces/" title="103 Interfaces" class="dd-item ">
+        <a href="../../100_wetfeet/103_interfaces/">
+        103 Interfaces
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/104_helloworld/" title="104 Hello world" class="dd-item ">
+        <a href="../../100_wetfeet/104_helloworld/">
+        104 Hello world
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/105_assignment/" title="105 Assignment 1" class="dd-item ">
+        <a href="../../100_wetfeet/105_assignment/">
+        105 Assignment 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/200_increase/" title="2 Adding some registers" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../200_increase/">
+          2 Adding some registers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/201_registerfile/" title="201 Register file" class="dd-item ">
+        <a href="../../200_increase/201_registerfile/">
+        201 Register file
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/202_test/" title="202 Updating test" class="dd-item ">
+        <a href="../../200_increase/202_test/">
+        202 Updating test
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/203_practice/" title="203 Practice" class="dd-item ">
+        <a href="../../200_increase/203_practice/">
+        203 Practice
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/300_oo/" title="3 Climbing the OO ladder" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../300_oo/">
+          3 Climbing the OO ladder
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/301_layered_testbench/" title="301 Layered testbench" class="dd-item ">
+        <a href="../../300_oo/301_layered_testbench/">
+        301 Layered testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/302_monitor/" title="302 Adding a monitor" class="dd-item ">
+        <a href="../../300_oo/302_monitor/">
+        302 Adding a monitor
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/303_joinorfail/" title="303 Join or fail" class="dd-item ">
+        <a href="../../300_oo/303_joinorfail/">
+        303 Join or fail
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/304_transactions/" title="304 Transactions" class="dd-item ">
+        <a href="../../300_oo/304_transactions/">
+        304 Transactions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/305_mailboxes/" title="305 Mailboxes" class="dd-item ">
+        <a href="../../300_oo/305_mailboxes/">
+        305 Mailboxes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/306_assignment/" title="306 Assignment 2" class="dd-item ">
+        <a href="../../300_oo/306_assignment/">
+        306 Assignment 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/307_scoreboard/" title="307 Checker &amp; scoreboard" class="dd-item ">
+        <a href="../../300_oo/307_scoreboard/">
+        307 Checker &amp; scoreboard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/308_golden/" title="308 Golden reference" class="dd-item ">
+        <a href="../../300_oo/308_golden/">
+        308 Golden reference
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_rand/" title="4 Randomisation" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../400_rand/">
+          4 Randomisation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/401_randomisation/" title="401 Randomisation" class="dd-item ">
+        <a href="../../400_rand/401_randomisation/">
+        401 Randomisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/402_constraint/" title="402 Constraints" class="dd-item ">
+        <a href="../../400_rand/402_constraint/">
+        402 Constraints
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/403_dpandcp/" title="403 DP and CP" class="dd-item active">
+        <a href="../../400_rand/403_dpandcp/">
+        403 DP and CP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/404_assignment/" title="404 Assignment 3" class="dd-item ">
+        <a href="../../400_rand/404_assignment/">
+        404 Assignment 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/500_coverage/" title="5 Coverage" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../500_coverage/">
+          5 Coverage
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/501_coverage/" title="501 Coverage" class="dd-item ">
+        <a href="../../500_coverage/501_coverage/">
+        501 Coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/502_funccoverage/" title="502 Functional coverage" class="dd-item ">
+        <a href="../../500_coverage/502_funccoverage/">
+        502 Functional coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/503_crosscoverage/" title="503 Cross coverage" class="dd-item ">
+        <a href="../../500_coverage/503_crosscoverage/">
+        503 Cross coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/504_morebins/" title="504 More on bins" class="dd-item ">
+        <a href="../../500_coverage/504_morebins/">
+        504 More on bins
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/505_assignment/" title="505 Assignment 4" class="dd-item ">
+        <a href="../../500_coverage/505_assignment/">
+        505 Assignment 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/600_assertions/" title="6 Assertions" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../600_assertions/">
+          6 Assertions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/601_assertions/" title="601 Assertions" class="dd-item ">
+        <a href="../../600_assertions/601_assertions/">
+        601 Assertions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/602_sequences/" title="602 Sequences" class="dd-item ">
+        <a href="../../600_assertions/602_sequences/">
+        602 Sequences
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/603_implications/" title="603 Implications" class="dd-item ">
+        <a href="../../600_assertions/603_implications/">
+        603 Implications
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/700_project/" title="7 Project" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../700_project/">
+          7 Project
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/800_finalremarks/" title="8 Final remarks" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../800_finalremarks/">
+          8 Final remarks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/800_finalremarks/801_final/" title="801 Final remarks" class="dd-item ">
+        <a href="../../800_finalremarks/801_final/">
+        801 Final remarks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/appendices/" title="Appendices" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../appendices/">
+          Appendices
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/appendices/cheat/" title="QuestaSim Commanline Cheats" class="dd-item ">
+        <a href="../../appendices/cheat/">
+        QuestaSim Commanline Cheats
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=3467&amp;n=4&amp;t=04#anker46108"><i class='fa fa-university'></i> ECTS Sheet</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Chip Design and Verification</a> > <a href='../../400_rand/'>4 Randomisation</a> > 403 DP and CP
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+<h1 id="dp-and-cp">DP and CP</h1>
+
+<p>A natural tendency you might have (I know I have) is to start applying different test vectors: &ldquo;Ok, my design knows 20 + 30, but does it also know 21 + 30 ?&rdquo;</p>
+
+<p>Randomising the <strong>inputs</strong> is a logical next step. Although this step is useful, it&rsquo;s far from sufficient.</p>
+
+<p>Years ago in this study program you were introduced to hardware design. Here you learned about the <strong>datapath (DP)</strong> and the <strong>control path (CP)</strong>. The datapath is the part of your design that handles the actual data. In the example of our <em>processor</em>, this simply covered the instruction and the probed output of <strong>reg A</strong>. The control path is the part of your design that directs your datapath to behave correctly. In the example of our ALU, this covers: the input flags, the operation and the output flags.</p>
+
+<p>It has been shown in the earlier sections of this chapter how randomisation can help us to better test a design. However, the only part that was randomised was the data path. A bold tester might even say after 10 successful tests of each operation of the ALU that the ALU works fine. (FTR: I&rsquo;m not that bold 😃)</p>
+
+<p>What if the control path would (also) be randomised ?</p>
+
+<p>Imagine the following bug:</p>
+
+<blockquote>
+<p>If an <strong>ADD</strong> is done after a <strong>SBC</strong>, an incorrect <strong>N-flag</strong> is reported.</p>
+</blockquote>
+
+<p>Because the course handles a simplified processor as DUT, this scenario might be a bit far fetched. Let&rsquo;s assume, nevertheless, that such a bug is there. <strong>Would your normal testbench catch it ? Or &hellip; would the SystemVerilog code (as it is at this point) catch it ?</strong></p>
+
+<h2 id="exercise-taking-apart-the-instruction">Exercise: Taking apart the instruction</h2>
+
+<p>The input to the DUT now simply is 1 single byte. However, these 8 bits are a concatenation of 3 different <em>parameters</em>:</p>
+
+<ul>
+<li>the first two bits (roughly) signal when the ALU is targeted. This can be deduced from the <strong>instruction set</strong> (e.g. <a href="https://clrhome.org/table/" target="_blank">here</a>): when the instruction starts with <strong>&ldquo;10&rdquo;</strong>, the ALU is required;</li>
+<li>the next three bits indicate which operation is selected (see <a href="../../200_increase/201_registerfile/#a-word-on-the-operation">201</a>);</li>
+<li>the final three bits indicate the selected operand.</li>
+</ul>
+
+<p>There is <strong>no rule</strong> that dictates that the instruction property in the transactions class must reflect the interface of the DUT.</p>
+
+<div class="multicolumn">
+    
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> transaction;
+  <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">byte</span> instruction;
+</code></pre></div>
+
+<p></div><br />
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> transaction;
+  <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_type;
+  <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_selection;
+  <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] operand_selection;
+</code></pre></div></p>
+
+<p></div></p>
+
+<p></div></p>
+
+<p>This, of course, has some minor implications on the rest of the class.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> transaction;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_type;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_selection;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] operand_selection;
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>();
+        <span style="color:#66d9ef">this</span>.instruction_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">2&#39;h0</span>;
+        <span style="color:#66d9ef">this</span>.instruction_selection <span style="color:#f92672">=</span> <span style="color:#ae81ff">3&#39;h0</span>;
+        <span style="color:#66d9ef">this</span>.operand_selection <span style="color:#f92672">=</span> <span style="color:#ae81ff">3&#39;h0</span>;
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">string</span> toString();
+        <span style="color:#66d9ef">return</span> $sformatf(<span style="color:#e6db74">&#34;Instruction: %02x %02x %02x (%02x) &#34;</span>, <span style="color:#66d9ef">this</span>.instruction_type, <span style="color:#66d9ef">this</span>.instruction_selection, <span style="color:#66d9ef">this</span>.operand_selection, <span style="color:#66d9ef">this</span>.toByte);
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> toString
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">byte</span> toByte();
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">byte</span>&#39;(<span style="color:#66d9ef">this</span>.instruction_type <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(<span style="color:#ae81ff">6</span>) <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.instruction_selection <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.operand_selection);
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> toByte;
+
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> transaction;
+</code></pre></div>
+
+<p>In the example above the <strong>toString()</strong> method has be updated to the new properties. Additionally, a <strong>toByte()</strong> function is added. This method will useful in the <em>driver</em>.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">    <span style="color:#66d9ef">this</span>.ifc.instruction <span style="color:#f92672">&lt;=</span> tra.instruction;
+<span style="color:#75715e">/* will become */</span>
+    <span style="color:#66d9ef">this</span>.ifc.instruction <span style="color:#f92672">&lt;=</span> tra.instruction.toByte();
+</code></pre></div>
+
+<h2 id="more-constraints">More constraints</h2>
+
+<p>Two more ways to constraint the randomness generation are given here.</p>
+
+<h3 id="inside-and-dist"><em>inside</em> and <em>dist</em></h3>
+
+<p>Two keywords can help you in verifying the design: <strong>inside</strong> and <strong>dist</strong>. Two examples are given below. Pay attention to the syntax !! Brackets, semicolons, curly brackets, etc. it sometimes becomes <em>delicate</em>.</p>
+
+<div class="multicolumn">
+    
+<div class="column">
+  <h3 id="inside">inside</h3>
+
+<p>With the <strong>inside</strong> keyword a value can be forced to lay between two different values.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">  <span style="color:#66d9ef">constraint</span> c1 {
+    (instruction_selection <span style="color:#66d9ef">inside</span> {<span style="color:#ae81ff">3</span><span style="color:#ae81ff">&#39;b000</span>, <span style="color:#ae81ff">3</span><span style="color:#ae81ff">&#39;b001</span>});
+  }
+  <span style="color:#66d9ef">constraint</span> c2 {
+    (instruction_selection <span style="color:#66d9ef">inside</span> {[<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>]});
+  }
+  <span style="color:#66d9ef">constraint</span> c3 {
+    <span style="color:#f92672">!</span>(instruction_selection <span style="color:#66d9ef">inside</span> {[<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>]});
+  }
+</code></pre></div></p>
+
+<p>The <strong>c1</strong> constraint implies that the operation must be either <strong>ADD</strong> or <strong>ADC</strong>. The possible values of <em>instruction_selection</em> are enumerated between the curly brackets.</p>
+
+<p>The <strong>c2</strong> constraint implies that the operation <strong>must</strong> be an <strong>arithmetic operation</strong>. The possible values of <em>operation</em> lies within the range <code>3'b000</code> to <code>3'b011</code> (with the upper-limit <em>inclusive</em>).</p>
+
+<p>The <strong>c3</strong> constraint implies that the operation <strong>may not</strong> be an <strong>arithmetic operation</strong>. The possible values of <em>operation</em> may not lay within the range <code>3'b000</code> to <code>3'b011</code>.</p>
+
+</div>    
+
+<div class="column">
+  <h3 id="dist">dist</h3>
+
+<p>With the <strong>dist</strong> keyword a value can be given a distribution of occurring.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog">  <span style="color:#66d9ef">constraint</span> c1 {
+    instruction_selection <span style="color:#66d9ef">dist</span> { <span style="color:#ae81ff">0</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span> };
+  }
+  <span style="color:#66d9ef">constraint</span> c2 {
+    instruction_selection <span style="color:#66d9ef">dist</span> { [<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>] <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>, [<span style="color:#ae81ff">4</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>] <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span> };
+  }
+  <span style="color:#66d9ef">constraint</span> c3 {
+    instruction_selection <span style="color:#66d9ef">dist</span> { [<span style="color:#ae81ff">0</span><span style="color:#f92672">:</span><span style="color:#ae81ff">3</span>] <span style="color:#f92672">:=</span> <span style="color:#ae81ff">5</span>, [<span style="color:#ae81ff">4</span><span style="color:#f92672">:</span><span style="color:#ae81ff">7</span>] <span style="color:#f92672">:/</span> <span style="color:#ae81ff">1</span> };
+  }
+</code></pre></div></p>
+
+<p>The <strong>c1</strong> constraint implies that the operation must be an <strong>arithmetic operation</strong> (because only values 0, 1, 2, and 3 are enumerated). On average, operations <strong>ADC</strong> and <strong>SBC</strong> should occur <strong>5</strong> times more than <strong>ADD</strong> and <strong>SUB</strong>.</p>
+
+<p>With <code>x := y</code> the relative weight of generating value <em>x</em> is set to <em>y</em>.</p>
+
+<p>The <strong>c2</strong> constraint implies that an <strong>arithmetic operation</strong> occurs 5 times more than a <strong>logical operation</strong>.</p>
+
+<p>The <strong>c3</strong> constraint implies that the weight of <em>1</em> is assigned to the entire range. This boils down to values 4-7 having a weight of 0.25, each.</p>
+
+</div>    
+
+<p></div></p>
+
+
+<div class="notices note" ></div>
+
+
+<h3 id="implication">Implication</h3>
+
+<p>Through the use of the <em>implication-operator (-&gt;)</em> conditional relations can be installed.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> OperandsDemo;
+ <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">byte</span> A;
+ <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">byte</span> B;
+ <span style="color:#66d9ef">constraint</span> c_implication_example {
+   A <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">-&gt;</span> B <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>;
+   A <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-&gt;</span> B <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">11</span>;
+ }
+</code></pre></div>
+
+
+<div class="notices tip" ><p>It is pointed out that these restrictions might seem a bit far fetched for this simple example. <br/>
+Hopefully these constraints give you a hint of the power of constraining randomness. By enabling/disabling such constraints the verification engineer can tune his/her test scenario to verify specific goals.
+<br/>
+<br/>
+Also note that these keywords can also be used for constraining the randomness in the datapath.</p>
+</div>
+
+
+<p>There are <strong>even more</strong> techniques to control the randomness generation. Also, given the object-oriented nature of SystemVerilog a lot more can be achieved by making subclasses an <strong>inheriting</strong> randomness settings and constraints from the parent classes. Handling all these degrees of freedom, however, would take us too far in this course.</p>
+
+<p>A small example on class inheritance is given below.</p>
+
+<div class="multicolumn">
+    
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> transaction;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_type;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] instruction_selection;
+    <span style="color:#66d9ef">rand</span> <span style="color:#66d9ef">bit</span> [<span style="color:#ae81ff">2</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>] operand_selection;
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>();
+        <span style="color:#66d9ef">this</span>.instruction_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">2&#39;h0</span>;
+        <span style="color:#66d9ef">this</span>.instruction_selection <span style="color:#f92672">=</span> <span style="color:#ae81ff">3&#39;h0</span>;
+        <span style="color:#66d9ef">this</span>.operand_selection <span style="color:#f92672">=</span> <span style="color:#ae81ff">3&#39;h0</span>;
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">string</span> toString();
+        <span style="color:#66d9ef">return</span> $sformatf(<span style="color:#e6db74">&#34;Instruction: %02x %02x %02x (%02x) &#34;</span>, <span style="color:#66d9ef">this</span>.instruction_type, <span style="color:#66d9ef">this</span>.instruction_selection, <span style="color:#66d9ef">this</span>.operand_selection, <span style="color:#66d9ef">this</span>.toByte);
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> toString
+
+    <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">byte</span> toByte();
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">byte</span>&#39;(<span style="color:#66d9ef">this</span>.instruction_type <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(<span style="color:#ae81ff">6</span>) <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.instruction_selection <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">**</span>(<span style="color:#ae81ff">3</span>) <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.operand_selection);
+    <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> toByte;
+
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> transaction;
+</code></pre></div>
+
+<p></div><br />
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> ALUtransaction <span style="color:#66d9ef">extends</span> transaction;</p>
+
+<p><span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>();
+      <span style="color:#66d9ef">super</span>.<span style="color:#66d9ef">new</span>();
+      <span style="color:#66d9ef">this</span>.instruction_type.rand_mode(<span style="color:#ae81ff">0</span>);
+      <span style="color:#66d9ef">this</span>.instruction_type <span style="color:#f92672">=</span> <span style="color:#ae81ff">2&#39;h2</span>;
+  <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span></p>
+
+<p><span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> ALUtransaction;
+</code></pre></div></p>
+
+<p></div></p>
+
+<p></div></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+            </div> 
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../400_rand/402_constraint/" title="402 Constraints"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../400_rand/404_assignment/" title="404 Assignment 3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1692348126"></script>
+    <script src="../../js/jquery.sticky.js?1692348126"></script>
+    <script src="../../js/featherlight.min.js?1692348126"></script>
+    <script src="../../js/highlight.pack.js?1692348126"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1692348126"></script>
+    <script src="../../js/learn.js?1692348126"></script>
+    <script src="../../js/hugo-learn.js?1692348126"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1692348126"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

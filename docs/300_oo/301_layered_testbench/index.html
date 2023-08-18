@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>301 Layered testbench :: Chip Design and Verification</title>
+
+    
+    <link href="../../css/nucleus.css?1692348126" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/hybrid.css?1692348126" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1692348126" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1692348126" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1692348126" rel="stylesheet">
+    <link href="../../css/theme.css?1692348126" rel="stylesheet">
+    <link href="../../css/tabs.css?1692348126" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1692348126" rel="stylesheet">
+    
+    <link href="../../css/theme-kul.css?1692348126" rel="stylesheet">
+    
+    
+
+    <script src="../../js/jquery-3.3.1.min.js?1692348126"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+<script src=../../js/exercises.js></script> 
+  </head>
+  <body class="" data-url="/300_oo/301_layered_testbench/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="https://www.kuleuven.be/kuleuven/" target="_blank">
+  <img src="../../img/style/kul.png" alt="KU Leuven" /><br/>
+</a>
+<a href="https://www.uhasselt.be/" target="_blank">
+  <img src="../../img/style/uhasselt.svg" alt="UHasselt" id="uhlogo" />
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1692348126"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1692348126"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/kuleuven-diepenbeek.github.io\/course_cdandverif\/";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1692348126"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/000_intro/" title="0 Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../000_intro/">
+          0 Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/000_introduction/" title="000 Introduction" class="dd-item ">
+        <a href="../../000_intro/000_introduction/">
+        000 Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/001_organisation/" title="001 Organisation" class="dd-item ">
+        <a href="../../000_intro/001_organisation/">
+        001 Organisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/000_intro/002_lab/" title="002 Lab" class="dd-item ">
+        <a href="../../000_intro/002_lab/">
+        002 Lab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/100_wetfeet/" title="1 Getting your feet wet" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../100_wetfeet/">
+          1 Getting your feet wet
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/100_alu/" title="100 ALU" class="dd-item ">
+        <a href="../../100_wetfeet/100_alu/">
+        100 ALU
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/101_testing/" title="101 Testing" class="dd-item ">
+        <a href="../../100_wetfeet/101_testing/">
+        101 Testing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/102_systemverilog/" title="102 SystemVerilog" class="dd-item ">
+        <a href="../../100_wetfeet/102_systemverilog/">
+        102 SystemVerilog
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/103_interfaces/" title="103 Interfaces" class="dd-item ">
+        <a href="../../100_wetfeet/103_interfaces/">
+        103 Interfaces
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/104_helloworld/" title="104 Hello world" class="dd-item ">
+        <a href="../../100_wetfeet/104_helloworld/">
+        104 Hello world
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/100_wetfeet/105_assignment/" title="105 Assignment 1" class="dd-item ">
+        <a href="../../100_wetfeet/105_assignment/">
+        105 Assignment 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/200_increase/" title="2 Adding some registers" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../200_increase/">
+          2 Adding some registers
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/201_registerfile/" title="201 Register file" class="dd-item ">
+        <a href="../../200_increase/201_registerfile/">
+        201 Register file
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/202_test/" title="202 Updating test" class="dd-item ">
+        <a href="../../200_increase/202_test/">
+        202 Updating test
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/200_increase/203_practice/" title="203 Practice" class="dd-item ">
+        <a href="../../200_increase/203_practice/">
+        203 Practice
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/300_oo/" title="3 Climbing the OO ladder" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="../../300_oo/">
+          3 Climbing the OO ladder
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/301_layered_testbench/" title="301 Layered testbench" class="dd-item active">
+        <a href="../../300_oo/301_layered_testbench/">
+        301 Layered testbench
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/302_monitor/" title="302 Adding a monitor" class="dd-item ">
+        <a href="../../300_oo/302_monitor/">
+        302 Adding a monitor
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/303_joinorfail/" title="303 Join or fail" class="dd-item ">
+        <a href="../../300_oo/303_joinorfail/">
+        303 Join or fail
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/304_transactions/" title="304 Transactions" class="dd-item ">
+        <a href="../../300_oo/304_transactions/">
+        304 Transactions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/305_mailboxes/" title="305 Mailboxes" class="dd-item ">
+        <a href="../../300_oo/305_mailboxes/">
+        305 Mailboxes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/306_assignment/" title="306 Assignment 2" class="dd-item ">
+        <a href="../../300_oo/306_assignment/">
+        306 Assignment 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/307_scoreboard/" title="307 Checker &amp; scoreboard" class="dd-item ">
+        <a href="../../300_oo/307_scoreboard/">
+        307 Checker &amp; scoreboard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/300_oo/308_golden/" title="308 Golden reference" class="dd-item ">
+        <a href="../../300_oo/308_golden/">
+        308 Golden reference
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/400_rand/" title="4 Randomisation" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../400_rand/">
+          4 Randomisation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/401_randomisation/" title="401 Randomisation" class="dd-item ">
+        <a href="../../400_rand/401_randomisation/">
+        401 Randomisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/402_constraint/" title="402 Constraints" class="dd-item ">
+        <a href="../../400_rand/402_constraint/">
+        402 Constraints
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/403_dpandcp/" title="403 DP and CP" class="dd-item ">
+        <a href="../../400_rand/403_dpandcp/">
+        403 DP and CP
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/400_rand/404_assignment/" title="404 Assignment 3" class="dd-item ">
+        <a href="../../400_rand/404_assignment/">
+        404 Assignment 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/500_coverage/" title="5 Coverage" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../500_coverage/">
+          5 Coverage
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/501_coverage/" title="501 Coverage" class="dd-item ">
+        <a href="../../500_coverage/501_coverage/">
+        501 Coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/502_funccoverage/" title="502 Functional coverage" class="dd-item ">
+        <a href="../../500_coverage/502_funccoverage/">
+        502 Functional coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/503_crosscoverage/" title="503 Cross coverage" class="dd-item ">
+        <a href="../../500_coverage/503_crosscoverage/">
+        503 Cross coverage
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/504_morebins/" title="504 More on bins" class="dd-item ">
+        <a href="../../500_coverage/504_morebins/">
+        504 More on bins
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/500_coverage/505_assignment/" title="505 Assignment 4" class="dd-item ">
+        <a href="../../500_coverage/505_assignment/">
+        505 Assignment 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/600_assertions/" title="6 Assertions" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../600_assertions/">
+          6 Assertions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/601_assertions/" title="601 Assertions" class="dd-item ">
+        <a href="../../600_assertions/601_assertions/">
+        601 Assertions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/602_sequences/" title="602 Sequences" class="dd-item ">
+        <a href="../../600_assertions/602_sequences/">
+        602 Sequences
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/600_assertions/603_implications/" title="603 Implications" class="dd-item ">
+        <a href="../../600_assertions/603_implications/">
+        603 Implications
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/700_project/" title="7 Project" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../700_project/">
+          7 Project
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/800_finalremarks/" title="8 Final remarks" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../800_finalremarks/">
+          8 Final remarks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/800_finalremarks/801_final/" title="801 Final remarks" class="dd-item ">
+        <a href="../../800_finalremarks/801_final/">
+        801 Final remarks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/appendices/" title="Appendices" class="dd-item
+        
+        
+        
+        ">
+      <a href="../../appendices/">
+          Appendices
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/appendices/cheat/" title="QuestaSim Commanline Cheats" class="dd-item ">
+        <a href="../../appendices/cheat/">
+        QuestaSim Commanline Cheats
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://studiegidswww.uhasselt.be/opleidingsonderdeel.aspx?a=2023&amp;i=3467&amp;n=4&amp;t=04#anker46108"><i class='fa fa-university'></i> ECTS Sheet</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://toledo.kuleuven.be/"><i class='fa fa-university'></i> Toledo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='../../'>Chip Design and Verification</a> > <a href='../../300_oo/'>3 Climbing the OO ladder</a> > 301 Layered testbench
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+
+
+<h1 id="layered-testbench">Layered testbench</h1>
+
+<p>Some of you might be thinking: <strong>&ldquo;That assignment and those exercises did not differ too much from the classical approach.&rdquo;</strong>. If so, you&rsquo;re right. From this point on, however, the layered testbench will be climbed.</p>
+
+<p><img src="../../img/layeredTB.png" alt="The layered testbench" /></p>
+
+<p>The concept in SystemVerilog is to build a layered testbench:</p>
+
+<ul>
+<li><strong>Signal layer</strong>: The bottom-most layer is the signal layer. On this level only the DUT resides. The signals that going to and from the DUT represent actual signals. Aspects like rise-times and clock cycles are important only on this level. This level mainly serves <strong>connectivity</strong>.</li>
+<li><strong>Command layer</strong>: The second layer is the command layer. This is an edge layer that translates signals from the software world into physical signals. This includes translations to conceptual interfaces like AXI4Stream. Transactions are done, in two directions, by the <em>driver</em> and the <em>monitor</em>. Assertions will be handled more thoroughly, later.</li>
+<li><strong>Functional level</strong>: At this level of abstraction, the tester no longer concerns himself/herself with signals and protocols, but focuses on the application level. Coming up with <em>questions</em> and determining the <em>answer</em> is done here. Also the checking of the observed outcome to the correct <em>answer</em> happens here. Finally, this layer keeps score 😃</li>
+<li><strong>Scenario</strong>: The highest level of abstraction is the scenario layer. In this layer different <em>scenarios</em> can be checked (what a surprise). Everybody should be familiar with <strong>happy path</strong> (when everything happens as it should, nobody is breaking any rules, nor trying to). A scenario where every 1% of the time something happens can be tested on this level, as example.</li>
+<li><strong>Control</strong>: Finally, an overarching layer controls all the layers.</li>
+</ul>
+
+<h2 id="going-step-by-step">Going step-by-step</h2>
+
+<p>During the first assignment, you&rsquo;ve <em>driven</em> the DUT directly. A total of 256 different testvectors were thrown at the DUT. The next step is to do this in a more SystemVerilog-like way.</p>
+
+<div class="multiHcolumn">
+  
+<div class="column">
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">class</span> driver;
+
+  <span style="color:#75715e">/* Virtual interface */</span>
+  <span style="color:#66d9ef">virtual</span> gbprocessor_iface ifc;
+
+  <span style="color:#75715e">/* Constructor */</span>
+  <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>(<span style="color:#66d9ef">virtual</span> gbprocessor_iface ifc);
+    <span style="color:#66d9ef">this</span>.ifc <span style="color:#f92672">=</span> ifc;
+  <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+  <span style="color:#75715e">/* run_addition method */</span>
+  <span style="color:#66d9ef">task</span> run_addition();
+    <span style="color:#66d9ef">string</span> s;
+    
+    $timeformat(<span style="color:#f92672">-</span><span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">0</span>,<span style="color:#e6db74">&#34; ns&#34;</span> , <span style="color:#ae81ff">10</span>); <span style="color:#75715e">/* format timing */</span>
+
+    <span style="color:#75715e">/* print message */</span>
+    s <span style="color:#f92672">=</span> $sformatf(<span style="color:#e6db74">&#34;[%t | DRV] I will start driving for addition&#34;</span>, $time);
+    $display(s);
+    
+    <span style="color:#75715e">/* start with reset */</span>
+    <span style="color:#66d9ef">this</span>.ifc.reset <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">&#39;b1</span>;
+    <span style="color:#66d9ef">repeat</span>(<span style="color:#ae81ff">10</span>) @(<span style="color:#66d9ef">posedge</span> <span style="color:#66d9ef">this</span>.ifc.clock);
+
+    <span style="color:#66d9ef">this</span>.ifc.reset <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">&#39;b0</span>;
+    <span style="color:#66d9ef">repeat</span>(<span style="color:#ae81ff">10</span>) @(<span style="color:#66d9ef">posedge</span> <span style="color:#66d9ef">this</span>.ifc.clock);
+
+    <span style="color:#75715e">/* execute instructions */</span>
+    <span style="color:#66d9ef">this</span>.ifc.valid <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">&#39;b1</span>;
+    <span style="color:#66d9ef">this</span>.ifc.instruction <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">8&#39;h81</span>;
+    @(<span style="color:#66d9ef">posedge</span> <span style="color:#66d9ef">this</span>.ifc.clock);
+
+    <span style="color:#66d9ef">this</span>.ifc.valid <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">&#39;b1</span>;
+    <span style="color:#66d9ef">this</span>.ifc.instruction <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">8&#39;h82</span>;
+    @(<span style="color:#66d9ef">posedge</span> <span style="color:#66d9ef">this</span>.ifc.clock);
+
+    <span style="color:#66d9ef">this</span>.ifc.valid <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">&#39;b0</span>;
+    <span style="color:#66d9ef">this</span>.ifc.instruction <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">8&#39;h00</span>;
+    @(<span style="color:#66d9ef">posedge</span> <span style="color:#66d9ef">this</span>.ifc.clock);
+
+    <span style="color:#75715e">/* print message */</span>
+    s <span style="color:#f92672">=</span> $sformatf(<span style="color:#e6db74">&#34;[%t | DRV] done&#34;</span>, $time);
+    $display(s);
+  <span style="color:#66d9ef">endtask</span> <span style="color:#f92672">:</span> run_addition
+
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> driver
+</code></pre></div>
+
+<p></div></p>
+
+<div class="column">
+  <p>Behold &hellip; the first class: <strong>driver</strong>.</p>
+
+<p>As you might recognise from other OO-languages, this class &lsquo;driver&rsquo; has:</p>
+
+<ul>
+<li>a single property <strong>ifc</strong>,</li>
+<li>one constructor <strong>new( )</strong>, and</li>
+<li>a single class method <strong>run_addition( )</strong>.</li>
+</ul>
+
+<p>It is pointed out that the <strong>this</strong> keyword should be used to distinguish between a local variable and a class member. In the line <code>this.ifc = ifc;</code> the left-hand <em>ifc</em> targets the class member. The right-hand occurrence of <em>ifc</em> targets the local variable that was given as a function argument.</p>
+
+<p>In the example, there is only one method <strong>run_addition()</strong>. When this method is called, it resets the DUT and then gives it 2 instructions.</p>
+
+</div>    
+
+<p></div></p>
+
+<p>Finally, there is one more important keyword: <strong>virtual</strong>. In SystemVerilog the interface is considered <em>static</em>. This makes sense as there should be <strong>only one</strong> interface that connects the test environment with the DUT. Classes, in contrast, are <em>dynamic</em> by nature. This also comes natural as class instances (or objects) are created dynamically.</p>
+
+<p>Because of this duality, it is not allowed to declare an interface within a class. The solution for this is to work with a <em>placeholder</em> that will be substituted with the actual interface. This is achieved by the <strong>virtual</strong> keyword. A <em>virtual interface</em> is a variable of a certain interface type that is used to facilitate access to the interface from within in a class.</p>
+
+
+<div class="notices note" ><p><strong>TL;DR</strong> &nbsp; for the interface: use virtual.</p>
+</div>
+
+
+<h2 id="building-the-testbench">Building the testbench</h2>
+
+<p>Keeping in mind one of the big benefits from SystemVerilog, being modularity and re-usability, it should not come as a surprise that the amount of files and hierarchy is substantial. <strong>Don&rsquo;t let that scare you !!</strong> The image below shows a simple example.</p>
+
+<p><img src="../../img/files.png" alt="The layered testbench" /></p>
+
+<p>The highest block is the testbench: <strong>top(.sv)</strong>. On the righthand-side there is the <strong>gbprocessor(.sv)</strong>. Note that the design itself could also consist of many files. The interface, <strong>ALU_iface(.sv)</strong>, is already discussed but is now simply stored in a separate file.</p>
+
+<p>The <em>software</em> is all contained and managed by <strong>test(.sv)</strong>. For now, the only thing this does is instantiating an <strong>environment(.sv)</strong>. The purpose of this environment will become clear later on in these labs. Finally, the only thing the environment currently does is instantiating the <strong>driver(.sv)</strong>.</p>
+
+<p><em>Hehe</em>, that was a lot of files and a seemingly pointless hierarchy. Below are basic examples of: top.sv, test.sv, and environment.sv.</p>
+
+<script>
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablink;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+} 
+</script>
+
+<div class="tab">
+  <button class="tablink" onclick="openTab(event, 'example_02_top')">top.sv</button>
+  <button class="tablink" onclick="openTab(event, 'example_02_tst')">test.sv</button>
+  <button class="tablink" onclick="openTab(event, 'example_02_env')">environment.sv</button>
+</div>
+
+<!-- ************************************************* -->
+
+<div id="example_02_top" class="tabcontent">
+  
+  
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;gbprocessor_iface.sv&#34;</span>
+<span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;test.sv&#34;</span>
+
+<span style="color:#66d9ef">module</span> top;
+    <span style="color:#66d9ef">logic</span> clock<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>;
+
+    <span style="color:#75715e">// clock generation - 100 MHz
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">always</span> #<span style="color:#ae81ff">5</span> clock <span style="color:#f92672">=</span> <span style="color:#f92672">~</span>clock;
+
+    <span style="color:#75715e">// instantiate an interface
+</span><span style="color:#75715e"></span>    gbprocessor_iface gb_iface (
+        .clock(clock)
+    );
+
+    <span style="color:#75715e">// instantiate the DUT and connect it to the interface
+</span><span style="color:#75715e"></span>    gbprocessor dut (
+        .reset(gb_iface.reset),
+        .clock(clock),
+        .instruction(gb_iface.instruction),
+        .valid(gb_iface.valid),
+        .probe(gb_iface.probe)
+    );
+
+    <span style="color:#75715e">// SV testing 
+</span><span style="color:#75715e"></span>    test tst(gb_iface);
+
+<span style="color:#66d9ef">endmodule</span> <span style="color:#f92672">:</span> top
+</code></pre></div>
+
+<p></div></p>
+
+<!-- ************************************************* -->
+
+<div id="example_02_tst" class="tabcontent">
+  
+  
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;gbprocessor_iface.sv&#34;</span>
+<span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;environment.sv&#34;</span>
+
+<span style="color:#66d9ef">program</span> test (gbprocessor_iface ifc);
+
+  environment env <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span>(ifc);
+
+  <span style="color:#66d9ef">initial</span>
+  <span style="color:#66d9ef">begin</span>
+    env.run();
+  <span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">endprogram</span> <span style="color:#f92672">:</span> test
+</code></pre></div>
+
+<p></div></p>
+
+<!-- ************************************************* -->
+
+<div id="example_02_env" class="tabcontent">
+  
+  
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-systemverilog" data-lang="systemverilog"><span style="color:#66d9ef">`include</span> <span style="color:#e6db74">&#34;driver.sv&#34;</span>
+
+<span style="color:#66d9ef">class</span> environment;
+
+  <span style="color:#66d9ef">virtual</span> gbprocessor_iface ifc;
+
+  driver drv;
+
+  <span style="color:#66d9ef">function</span> <span style="color:#66d9ef">new</span>(<span style="color:#66d9ef">virtual</span> gbprocessor_iface ifc);
+    <span style="color:#66d9ef">this</span>.drv <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span>(ifc);
+  <span style="color:#66d9ef">endfunction</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span>
+
+
+  <span style="color:#75715e">/* Task : run
+</span><span style="color:#75715e">   * Parameters :
+</span><span style="color:#75715e">   * Returns :
+</span><span style="color:#75715e">  **/</span>
+  <span style="color:#66d9ef">task</span> run();
+    <span style="color:#66d9ef">this</span>.drv.run_addition();
+  <span style="color:#66d9ef">endtask</span> <span style="color:#f92672">:</span> run
+
+<span style="color:#66d9ef">endclass</span> <span style="color:#f92672">:</span> environment
+</code></pre></div>
+
+<p></div></p>
+
+<!-- ************************************************* -->
+
+<p>If you add the <em>driver.sv</em>, as illustrated above, you can start running the simulator. The result of this should look like shown below.</p>
+
+<p><img src="../../img/screenshot_301_sim.png" alt="Simulation screenshot driver" /></p>
+
+<h2 id="now-you-try-this">Now you try this !!</h2>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+            </div> 
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../../300_oo/" title="3 Climbing the OO ladder"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="../../300_oo/302_monitor/" title="302 Adding a monitor" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1692348126"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1692348126"></script>
+    <script src="../../js/jquery.sticky.js?1692348126"></script>
+    <script src="../../js/featherlight.min.js?1692348126"></script>
+    <script src="../../js/highlight.pack.js?1692348126"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1692348126"></script>
+    <script src="../../js/learn.js?1692348126"></script>
+    <script src="../../js/hugo-learn.js?1692348126"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1692348126"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

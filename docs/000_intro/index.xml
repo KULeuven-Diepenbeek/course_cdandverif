@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0 Introduction on Chip Design and Verification</title>
+    <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/</link>
+    <description>Recent content in 0 Introduction on Chip Design and Verification</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <managingEditor>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</managingEditor>
+    <webMaster>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</webMaster>
+    
+	<atom:link href="https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>000 Introduction</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/000_introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/000_introduction/</guid>
+      <description>Introduction In these lab series a deeper dive is taken into verification. Up until now, you&amp;rsquo;ll probably (and hopefully) have made a number of testbenches. These testbenches were focussed on the behaviour of a handful of components. It is still good practise to do this. When you&amp;rsquo;re making a hardware driver for a stepper motor, it&amp;rsquo;s only common sense that you test your design.
+Something that occurs with many beginning hardware designers is that they only test happy path.</description>
+    </item>
+    
+    <item>
+      <title>001 Organisation</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/001_organisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/001_organisation/</guid>
+      <description>Organisation These series of lab sessions will introduce you to SystemVerilog. Although this series will be taught during application colleges, the interested student can proceed at his/her own pace. If you are intrigued by the exercises, of if you prefer to continue working while the mindset is focused on the topic, you should find it possible to continue at a faster pace.
+If you have any question, suggestion, or problem with these labs, the forum on Toledo is your place-to-go.</description>
+    </item>
+    
+    <item>
+      <title>002 Lab</title>
+      <link>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/002_lab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>&lt;i&gt;fname&lt;/i&gt;.&lt;i&gt;lname&lt;/i&gt;A T&lt;i&gt;kuleuven.be&lt;/i&gt; (Nele Mentens and Jo Vliegen)</author>
+      <guid>https://kuleuven-diepenbeek.github.io/course_cdandverif/000_intro/002_lab/</guid>
+      <description>Lab To tldr;
+To be able to run the simulation in these labs, dedicated software is required. As SystemVerilog is not an everyday language for simulation (or verification to be more precise), we have to rely on the 3 EDA (electronic design automation) giants in industry:
+ Mentor Graphics Cadence Synopsys  Due to license constraints these labs will done in QuestaSim (previously known as ModelSim), by Mentor Graphics.</description>
+    </item>
+    
+  </channel>
+</rss>
