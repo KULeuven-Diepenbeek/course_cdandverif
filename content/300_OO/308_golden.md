@@ -161,3 +161,5 @@ Try to complete the **executeALUInstruction(byte instr)** function so an **ADD H
   <li>... understand terms like **generator** and **scoreboard** and understand there function</li>
 </ul>
 
+{{% /centeredColumn75 %}}
+
